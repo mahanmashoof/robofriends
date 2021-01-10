@@ -13,12 +13,11 @@ class ErrorBoundry extends Component {
     this.setState({hasError: true})
   }
 
-  return() {
+  render () {
     if (this.state.error) {
       return <h1>Oops, something's wrong</h1>
-    } else {
-      return this.props.children
     }
+    return this.props.children
   }
 }
 
